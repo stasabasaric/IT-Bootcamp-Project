@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ProjectSuite">
+	<test thread-count="5" name="OpenHomePageAndSummerDresses" preserve-order="true">
+		<classes>
+			<class name="webPage.tests.test1.HomePageTest" />
+			<class name="webPage.tests.test1.SummerDressesTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="RegFormFields">
+		<classes>
+			<class name="webPage.tests.test2.RegFormTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="AddDressToCartAndRegister"
+		preserve-order="true">
+		<classes>
+			<class name="webPage.tests.test3.CartTest" />
+			<class name="webPage.tests.test3.RegisterUserTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="RegisterAndLog30Users"
+		preserve-order="true">
+		<classes>
+			<class name="webPage.tests.test4.Register30UsersTest" />
+			<class name="webPage.tests.test4.Log30UsersTest" />
+		</classes>
+	</test>
+</suite> 
