@@ -35,19 +35,19 @@ public class Register30UsersTest extends BaseClass {
 
 		SoftAssert sa = new SoftAssert();
 		
+		wait(2000);
+		SignInPage.open(wd);
 		
 		// for loop - for registering 30 users
 		for (int i = 1; i < ExcelUtils.getRowCount(sheet); i++) {
 			
-			wait(2000);
-			SignInPage.open(wd);
 			wait(2000);
 			
 			// gets mail data from i row and first column
 			SignInPage.createAccount(wd, ExcelUtils.getCellData(i, 1));
 			
 			// creating an array for storing remaining cells data in row i
-			String[] data = new String[ExcelUtils.getColCount(i) - 2];
+			String[] data = new String[ExcelUtils.getColCount(i) - 3];
 			
 			// for loop  for loading the String array with remaining cells data in row i
 			for (int j = 0, c = 2; j < data.length && c < ExcelUtils.getColCount(i); j++, c++) {
